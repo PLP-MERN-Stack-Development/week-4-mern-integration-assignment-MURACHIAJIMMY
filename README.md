@@ -1,79 +1,81 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19844007&assignment_repo_type=AssignmentRepo)
-# MERN Stack Integration Assignment
+📝** MERN Blog Platform**
 
-This assignment focuses on building a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that demonstrates seamless integration between front-end and back-end components.
+A dynamic blogging platform built with the MERN stack (MongoDB, Express, React, Node.js), featuring user authentication, role-based access control, protected routes, and a responsive light/dark theme toggle.
 
-## Assignment Overview
+🌟 **Features**
 
-You will build a blog application with the following features:
-1. RESTful API with Express.js and MongoDB
-2. React front-end with component architecture
-3. Full CRUD functionality for blog posts
-4. User authentication and authorization
-5. Advanced features like image uploads and comments
+🔐 JWT Authentication (Login/Register)
 
-## Project Structure
+🧑‍⚕️ Role-based Access Control (Admin, Doctor, Patient)
 
-```
-mern-blog/
-├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
-│   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── services/       # API services
-│   │   ├── context/        # React context providers
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
-├── server/                 # Express.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Route controllers
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   ├── utils/              # Utility functions
-│   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
-└── README.md               # Project documentation
-```
+✍️ CRUD for Posts (Create, Edit, Delete, View)
 
-## Getting Started
+🧭 Protected Dashboard Layout
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week4-Assignment.md` file
-4. Complete the tasks outlined in the assignment
+🌗 Dark/Light Theme Toggle (Tailwind + ThemeProvider)
 
-## Files Included
+🚀 Built using pnpm, Vite, React, Tailwind CSS, and shadcn/ui
 
-- `Week4-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Configuration files
-  - Sample models and components
 
-## Requirements
+<img width="568" alt="Screenshot 2025-06-26 223240" src="https://github.com/user-attachments/assets/0ef857d3-1c44-4e56-b33c-a32972de8865" />
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git
+🚧 **Project Structure**
 
-## Submission
+/client
+  ├── src/
+  │   ├── components/
+  │   ├── context/
+  │   ├── hooks/
+  │   ├── pages/
+  │   └── routes/
+  └── tailwind.config.js
+/server
+  ├── controllers/
+  ├── routes/
+  ├── models/
+  ├── middleware/
+  └── server.js
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+⚙️** Getting Started**
 
-1. Complete both the client and server portions of the application
-2. Implement all required API endpoints
-3. Create the necessary React components and hooks
-4. Document your API and setup process in the README.md
-5. Include screenshots of your working application
+📦** 1. Install Dependencies**
 
-## Resources
+pnpm install
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Mongoose Documentation](https://mongoosejs.com/docs/) 
+cd client && pnpm install
+
+
+<img width="473" alt="Screenshot 2025-06-26 223544" src="https://github.com/user-attachments/assets/f36adf44-c5a1-40e1-9cb7-811328a5184f" />
+
+
+<img width="451" alt="Screenshot 2025-06-26 223635" src="https://github.com/user-attachments/assets/06b6d29c-1993-4baf-bd37-c1459a956e6a" />
+
+
+
+✨ **Light/Dark Theme**
+
+Toggle button in the header lets users switch between modes. 
+
+Theme is stored in localStorage and applied via the ThemeProvider context using Tailwind's darkMode: 'class' strategy.
+
+🔐 **Authentication Notes**
+
+Uses axios to send JWTs in Authorization headers
+
+Role-based routing controls dashboard access and content visibility
+
+Example roles: admin, doctor, patient
+
+
+🧩 **Future Improvements**
+
+🖼 Add blog cover image upload via Cloudinary
+
+📅 Post scheduling
+
+🌐 Multi-language support
+
+🧠 Rich text editor for blog content (e.g., TipTap or Quill)
+
+
+@JAMES MURACHIA
